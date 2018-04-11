@@ -55,6 +55,21 @@ class ApiFacade {
         return fetch(URL+"/api/info/admin",options).then(handleHttpErrors);
     }
 
+    fetchDataPeople = () => {
+        const options = this.makeFetchOptions("GET");
+        return fetch(URL+"/api/starwars/people" + id,options).then(handleHttpErrors);
+    }
+
+    fetchDataPlanets = () => {
+        const options = this.makeFetchOptions("GET");
+        return fetch(URL+"/api/starwars/planets/" +id,options).then(handleHttpErrors);
+    }
+
+    fetchDataStarships = () => {
+        const options = this.makeFetchOptions("GET");
+        return fetch(URL+"/api/starwars/Starships/" + id ,options).then(handleHttpErrors);
+    }
+
 }
 const facade = new ApiFacade();
 export default facade;
