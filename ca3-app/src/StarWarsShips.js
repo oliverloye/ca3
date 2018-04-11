@@ -1,16 +1,20 @@
 
 import React,{Component} from 'react';
 import facade from "./apiFacade";
-class StarWars extends Component {
+class StarWarsShips extends Component {
 constructor(props){
     super(props)
     
+}
+
+onChange = (evt) => {
+    this.setState({[evt.target.id]: evt.target.value})
 }
 render(){
     return(
         <div>
             <h2>type in an id to find a Starship</h2>
-         <form>
+         <form onChange={this.onChange}>
          <label>
          Starship id:
           <input placeholder="id" type="number" />
@@ -31,3 +35,5 @@ componentDidMount(){
 
 
 }
+
+export default StarWarsShips;

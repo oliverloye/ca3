@@ -6,6 +6,9 @@ import {
     Link
 } from 'react-router-dom'
 import facade from "./apiFacade";
+import Ships from './StarWarsShips';
+import Plantes from './StarWarsPlanets';
+import Person from './StarWarsPerson';
 
 class LogIn extends Component {
     constructor(props) {
@@ -144,6 +147,9 @@ const BasicExample = () => (
                 <li><NavLink to="/about">About</NavLink></li>
                 <li><NavLink to="/topics">Topics</NavLink></li>
                 <li><NavLink to="/login">Login</NavLink></li>
+                <li><NavLink to="/person">Person</NavLink></li>
+                <li><NavLink to="/ships">Ships</NavLink></li>
+                <li><NavLink to="/plantes">Plantes</NavLink></li>
             </ul>
 
             <hr/>
@@ -152,6 +158,9 @@ const BasicExample = () => (
             <Route path="/about" component={About}/>
             <Route path="/topics" component={Topics}/>
             <Route path="/login" component={App}/>
+            <Route path="/person" component={Person}/>
+            <Route path="/ships" component={Ships}/>
+            <Route path="/plantes" component={Plantes}/>
         </div>
     </Router>
 )
