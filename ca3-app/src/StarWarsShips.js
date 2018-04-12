@@ -1,6 +1,6 @@
 
 import React,{Component} from 'react';
-import facade from "./apiFacade";
+import facade from "./StarWarsFacade";
 class StarWarsShips extends Component {
 constructor(props){
     super(props)

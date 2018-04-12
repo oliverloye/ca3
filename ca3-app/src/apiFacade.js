@@ -1,4 +1,5 @@
 const URL = "http://localhost:8084/jwtbackend";
+const URL2 = "http://localhost:8084/jwtbackend/api/starwars";
 
 function handleHttpErrors(res) {
     if (!res.ok) {
@@ -53,21 +54,6 @@ class ApiFacade {
     fetchDataAdmin = () =>{
         const options = this.makeFetchOptions("GET");
         return fetch(URL+"/api/info/admin",options).then(handleHttpErrors);
-    }
-
-    fetchDataPeople = () => {
-        const options = this.makeFetchOptions("GET");
-        return fetch(URL+"/api/starwars/people" + id,options).then(handleHttpErrors);
-    }
-
-    fetchDataPlanets = () => {
-        const options = this.makeFetchOptions("GET");
-        return fetch(URL+"/api/starwars/planets/" +id,options).then(handleHttpErrors);
-    }
-
-    fetchDataStarships = () => {
-        const options = this.makeFetchOptions("GET");
-        return fetch(URL+"/api/starwars/Starships/" + id ,options).then(handleHttpErrors);
     }
 
 /*
